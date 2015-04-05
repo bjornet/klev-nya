@@ -1,5 +1,65 @@
 /*jQuery.noConflict();*/
 jQuery(document).ready(function ($) {
+	
+    /*===================================================================================*/
+    /*  CUSTOM
+    /*===================================================================================*/
+
+	/** LYBE: Björn [Init Google Maps via API V3] **/
+	var initializeMaps = function() {
+		// vars
+		var klevPos = "58.4654133,11.3354442";
+		var canvasID = 'gmaps-canvas';
+
+		var latlng = new google.maps.LatLng(klevPos);
+		var styles = [
+			{
+				stylers: [{ saturation: -40 }]
+			},
+			{
+				featureType: "building", 
+				elementType: "labels" 
+			},
+			{
+				featureType: "poi", 
+				stylers: [{ hue: '#0044ff' }] 
+			}
+		];  
+		
+		var myOptions = { 
+			zoom: 15, 
+			center: latlng, 
+			mapTypeId: google.maps.MapTypeId.HYBRID, 
+			disableDefaultUI: true, 
+			mapTypeControl: true, 
+			styles: styles, 
+			zoomControl: true, 
+			zoomControlOptions: { 
+				style: google.maps.ZoomControlStyle.SMALL 
+			}
+		};  
+	
+		map = new google.maps.Map(document.getElementById(canvasID), myOptions);
+
+		var marker = new google.maps.Marker({ 
+			position: latlng, 
+			map: map, 
+			title:"Klevs Lantbruk HB"
+		});
+	
+		google.maps.event.addDomListener(window, "resize", function() { 
+			var center = map.getCenter(); 
+			google.maps.event.trigger(map, "resize"); 
+			map.setCenter(center);
+		});
+	}
+
+	// Trigger
+	jQuery('.page-template-page-contact').find('#content .tabs li:last-child').on('click', 'a', function() {
+		setTimeout(function () {
+			initializeMaps();
+		}, 500);
+	});
 
     /*===================================================================================*/
     /*  Quickmenu
