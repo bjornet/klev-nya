@@ -51,7 +51,15 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	// Trigger
+	/** LYBE: Björn [Triggers] **/
+	// On load: Start page
+	if ($('body').hasClass('home')) {
+		setTimeout(function () {
+			initializeMaps();
+		}, 500);
+	}
+
+	// On click: Sontact page
 	jQuery('.page-template-page-contact').find('#content .tabs li:last-child').on('click', 'a', function() {
 		setTimeout(function () {
 			initializeMaps();
