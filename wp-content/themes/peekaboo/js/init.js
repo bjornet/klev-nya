@@ -6,24 +6,21 @@ jQuery(document).ready(function ($) {
     /*===================================================================================*/
 
 	/** LYBE: Björn [Init Google Maps via API V3] **/
-	var initializeMaps = function() {
-		// vars
-		var klevPos = "58.4654133,11.3354442";
-		var canvasID = 'gmaps-canvas';
-
-		var latlng = new google.maps.LatLng(klevPos);
+	var initializeMaps = function () {
+		// 58.4654133,11.3354442 Klev
+		var latlng = new google.maps.LatLng(58.4654133,11.3354442);
 		var styles = [
-			{
-				stylers: [{ saturation: -40 }]
-			},
-			{
-				featureType: "building", 
-				elementType: "labels" 
-			},
-			{
-				featureType: "poi", 
-				stylers: [{ hue: '#0044ff' }] 
-			}
+		{
+			stylers: [{ saturation: -40 }]
+		},
+		{
+			featureType: "building", 
+			elementType: "labels" 
+		},
+		{
+			featureType: "poi", 
+			stylers: [{ hue: '#0044ff' }] 
+		}
 		];  
 		
 		var myOptions = { 
@@ -39,7 +36,7 @@ jQuery(document).ready(function ($) {
 			}
 		};  
 	
-		map = new google.maps.Map(document.getElementById(canvasID), myOptions);
+		map = new google.maps.Map(document.getElementById('gmaps-canvas'), myOptions);
 
 		var marker = new google.maps.Marker({ 
 			position: latlng, 
