@@ -1,3 +1,8 @@
+/** LYBE: Björn [ODD BREAKPOINT!] **/
+@media screen and (min-width: 1026px) {
+	.main-nav { padding-right: 0; }
+}
+
 @media screen and (min-width: 1024px) {
     .overview span.title {
         margin-top: -14px;
@@ -101,10 +106,6 @@
     .contain-to-grid.fixed {
         background: $fd-topbar-background-color;
     }
-    .main-nav {
-        padding-right: 0;
-    }
-
 }
 
 /* All Mobile Sizes (devices and browser) */

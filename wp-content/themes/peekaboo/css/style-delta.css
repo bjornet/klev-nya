@@ -813,7 +813,12 @@ Native Gallery
 Header
 -------------------------------*/
 #header {
-  padding: 0 0 1.25rem; }
+  padding: 0 0 1.25rem;
+  /** LYBE: Björn [Looks Header Top] **/ }
+  #header .header-top {
+    background: white;
+    padding: 0.3em;
+    color: green; }
 
 #logo {
   margin: 1.25rem 0; }
@@ -2388,6 +2393,10 @@ ul.submenu {
 6.  STATE
 
 ------------------------------------------------------------------*/
+/** LYBE: Björn [ODD BREAKPOINT!] **/
+@media screen and (min-width: 1026px) {
+  .main-nav {
+    padding-right: 0; } }
 @media screen and (min-width: 1024px) {
   .overview span.title {
     margin-top: -14px; }
@@ -2493,10 +2502,7 @@ ul.submenu {
     background: none; }
 
   .contain-to-grid.fixed {
-    background: #e83112; }
-
-  .main-nav {
-    padding-right: 0; } }
+    background: #e83112; } }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   .section-title.row {
