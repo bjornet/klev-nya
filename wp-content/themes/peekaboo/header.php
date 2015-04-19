@@ -47,7 +47,10 @@ global $smof_data;
 
 			<?php # LYBE: Björn [Hard coded: Header Top] ?>
 			<div class="large-12 small-12 columns header-top">
-				..TELEFON.. | ..BESÖKSADRESS.. | ..KONTAKTPERSON..
+			<?php
+				$headerTop = get_post(1239); //header top ID
+				echo $headerTop->post_content;
+			?>
 			</div>
 
 			<div class="row">
