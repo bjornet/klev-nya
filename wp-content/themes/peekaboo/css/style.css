@@ -1950,6 +1950,10 @@ Foundation Accordion
 /*-------------------------------
 WordPress admin bar
 -------------------------------*/
+/** LYBE: Björn [Generic classes] **/
+.no-link {
+  cursor: default; }
+
 /*-------------------------------
 Tabs
 -------------------------------*/
