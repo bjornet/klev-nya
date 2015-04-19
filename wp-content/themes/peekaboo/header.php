@@ -46,10 +46,8 @@ global $smof_data;
         <div id="header" class=" ">
 
 			<?php # LYBE: Björn [Hard coded: Header Top] ?>
-			<div class="row">
-				<div class="large-3 small-12 columns header-top">
-					..TELEFON.. | ..BESÖKSADRESS.. | ..KONTAKTPERSON..
-				</div>
+			<div class="large-12 small-12 columns header-top">
+				..TELEFON.. | ..BESÖKSADRESS.. | ..KONTAKTPERSON..
 			</div>
 
 			<div class="row">
