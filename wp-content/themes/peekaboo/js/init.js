@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 		var myOptions = { 
 			zoom: 15, 
 			center: latlng, 
-			mapTypeId: google.maps.MapTypeId.HYBRID, 
+			mapTypeId: google.maps.MapTypeId.ROADMAP, 
 			disableDefaultUI: true, 
 			mapTypeControl: true, 
 			styles: styles, 

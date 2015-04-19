@@ -43,7 +43,7 @@ $row-width: rem-calc(1020);
 // We use these to control various global styles
 // $body-bg: #FFF;
 $body-font-color: #555;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: $serif-type;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -119,8 +119,9 @@ $column-gutter: rem-calc(30);
 
 // $include-html-type-classes: $include-html-classes;
 
+/** LYBE: Björn [Header font family defined here. How to use?] **/
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: $mentone-type;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: #222;

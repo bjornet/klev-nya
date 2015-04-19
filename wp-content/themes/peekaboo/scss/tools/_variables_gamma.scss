@@ -38,3 +38,40 @@ $topbar-social-icons-hover: rgba(255,255,255, 1);
 $serif-type : Georgia, Cambria, "Times New Roman", Times, serif;
 $helvetica-type : Helvetica, Arial, sans-serif;
 $trebuchet-type: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+
+/** LYBE: Björn [Klev Fonts] **/
+@font-face {
+    font-family: "Calibri";
+    src: url(../font/calibri/calibri.ttf) format('truetype');
+    font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: "Calibri Black";
+    src: url(../font/calibri/calibri_bold.ttf) format('truetype');
+    font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+    font-family: "Calibri Italic";
+    src: url(../font/calibri/calibri_italic.ttf) format('truetype');
+    font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+    font-family: "Calibri Bold Italic";
+    src: url(../font/calibri/calibri_bold_italic.ttf) format('truetype');
+    font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+    font-family: "Mentone";
+    src: url(../font/mentone/mentone-semibol.otf) format('opentype');
+	font-style: normal;
+}
+
+/** LYBE: Björn [Override for Klev Typography] **/
+$serif-type: "Calibri", Helvetica, Arial, sans-serif;
+$helvetica-type: $serif-type;
+$trebuchet-type: $serif-type;
+$mentone-type: "Mentone", Helvetica, Arial, sans-serif;
