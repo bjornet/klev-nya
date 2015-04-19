@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .replace {
     letter-spacing: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: $header-font-family;
 }
 
 a {
@@ -120,7 +120,7 @@ sub {
 blockquote {
     background: url(../img/blockquote_bg.png) no-repeat left 4px;
     padding: 0 0 0 rem-calc(46);
-    font-family: Georgia, Times, serif;
+    font-family: $serif-type;
     font-style: italic;
     overflow: hidden;
     border: none;
@@ -135,7 +135,7 @@ blockquote {
     margin: rem-calc(7) 0 rem-calc(10) rem-calc(15);
     text-shadow: 0 1px 1px #CCC;
     @include border-radius(4px);
-    font: italic 15px / 1.8 Georgia, Times, serif;
+    font: italic 15px / 1.8 $serif-type;
 }
 
 .pullquote_left {
@@ -147,7 +147,7 @@ blockquote {
     margin: rem-calc(7) 0 rem-calc(10) rem-calc(15);
     text-shadow: 0 1px 1px #CCC;
     @include border-radius(4px);
-    font: italic 15px / 1.8 Georgia, Times, serif;
+    font: italic 15px / 1.8 $serif-type;
     float: left;
     margin: rem-calc(10) rem-calc(15) rem-calc(10) 0;
 }

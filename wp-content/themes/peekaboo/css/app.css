@@ -4206,7 +4206,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;
@@ -4300,7 +4300,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit; }
+  font-family: "Calibri", Helvetica, Arial, sans-serif; }
 
 ul {
   margin-left: 1.1rem; }
