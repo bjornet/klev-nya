@@ -247,7 +247,10 @@ Featured Post
 		   	}
 		}
 
-		.excerpt_container { padding-top: 5px; }
+		.excerpt_container {
+			padding-top: 5px;
+			min-height: 245px;
+		}
 	}
 } 
 
@@ -272,6 +275,13 @@ Featured Post
   }
   .button {
     margin-bottom: 0;
+    position: absolute;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    bottom: 16px;
+    padding-top: 4px !important;
+    padding-right: 3px !important;
   }
 }
 

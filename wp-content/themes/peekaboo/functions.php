@@ -294,7 +294,7 @@ add_action('widgets_init', 'pkb_widgets_init');
 /*-----------------------------------------------------------------------------------*/
 function pkb_excerpt_length($length)
 {
-    return 64;
+    return 20;
 }
 
 add_filter('excerpt_length', 'pkb_excerpt_length');
@@ -316,9 +316,9 @@ function pkb_continue_reading_button()
 { //Learn more button on home page
     global $smof_data;
     if ($smof_data['pkb_more_link'] != "") {
-        return '</p><a class="button fancy small cta" href="' . get_permalink() . '">' . $smof_data['pkb_more_link'] . '<i class="fontawesome-right-open"></i></a>';
+        return '</p><a class="button fancy small cta" href="' . get_permalink() . '">' . $smof_data['pkb_more_link'] . '<i class="fa fa-arrow-circle-right fa-2x"></i></a>';
     } else {
-        return '</p><a class="button fancy small cta" href="' . get_permalink() . '">' . __('Learn more', 'peekaboo') . '<i class="fontawesome-right-open"></i></a>';
+        return '</p><a class="button fancy small cta" href="' . get_permalink() . '">' . __('Learn more', 'peekaboo') . '<i class="fa fa-arrow-circle-right fa-2x"></i></a>';
     }
 }
 
