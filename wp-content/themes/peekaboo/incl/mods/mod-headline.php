@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mod-headline">
     <hr>
 </div>
 

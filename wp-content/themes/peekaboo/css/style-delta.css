@@ -1597,76 +1597,80 @@ Content
 /*-------------------------------
 Featured Post
 -------------------------------*/
-/** LYBE: Björn [Center symbol] **/
-/* line 233, ../scss/pages/_home.scss */
+/* line 231, ../scss/pages/_home.scss */
+.featured-title a {
+  color: #009bdf;
+}
+
+/* line 234, ../scss/pages/_home.scss */
 .featured-post .entry-title {
   font-weight: 300;
   font-size: 1.3em;
   line-height: 1.15;
 }
-/* line 239, ../scss/pages/_home.scss */
+/* line 240, ../scss/pages/_home.scss */
 .featured-post .post-module a {
   padding: 10px 0 0;
   display: block;
 }
-/* line 242, ../scss/pages/_home.scss */
+/* line 243, ../scss/pages/_home.scss */
 .featured-post .post-module a .figure-img {
   max-height: 100px;
   margin: 0 auto;
   display: block;
 }
-/* line 249, ../scss/pages/_home.scss */
+/* line 250, ../scss/pages/_home.scss */
 .featured-post .post-module .excerpt_container {
   padding-top: 5px;
 }
 
-/* line 254, ../scss/pages/_home.scss */
+/* line 255, ../scss/pages/_home.scss */
 .entry-title a {
-  color: #444;
-}
-/* line 256, ../scss/pages/_home.scss */
-.entry-title a:hover {
   color: #009bdf;
+}
+/* line 257, ../scss/pages/_home.scss */
+.entry-title a:hover {
+  color: #000;
   text-decoration: none;
 }
 
-/* line 262, ../scss/pages/_home.scss */
+/* line 263, ../scss/pages/_home.scss */
 .post-module {
   background: #FFF;
   margin-bottom: 0.625rem;
 }
 
-/* line 267, ../scss/pages/_home.scss */
+/* line 268, ../scss/pages/_home.scss */
 .excerpt_container {
   padding: 1rem 0;
 }
-/* line 269, ../scss/pages/_home.scss */
+/* line 270, ../scss/pages/_home.scss */
 .excerpt_container > p {
   font-size: 0.875rem;
 }
-/* line 272, ../scss/pages/_home.scss */
+/* line 273, ../scss/pages/_home.scss */
 .excerpt_container .button {
   margin-bottom: 0;
 }
 
-/* line 278, ../scss/pages/_home.scss */
+/* line 279, ../scss/pages/_home.scss */
 .section-title.row {
   margin-bottom: 1em;
 }
-/* line 281, ../scss/pages/_home.scss */
+/* line 282, ../scss/pages/_home.scss */
 .section-title h4 {
   text-transform: uppercase;
 }
-/* line 283, ../scss/pages/_home.scss */
+/* line 284, ../scss/pages/_home.scss */
 .section-title h4 a:hover {
   color: #000;
   text-decoration: none;
 }
-/* line 288, ../scss/pages/_home.scss */
+/* line 289, ../scss/pages/_home.scss */
 .section-title .button {
   color: #969b9b;
 }
-/* line 291, ../scss/pages/_home.scss */
+/* line 292, ../scss/pages/_home.scss */
 .section-title .large-2 {
   text-align: right;
 }
@@ -1674,39 +1678,39 @@ Featured Post
 /*-------------------------------
 Call to Action
 -------------------------------*/
-/* line 299, ../scss/pages/_home.scss */
+/* line 300, ../scss/pages/_home.scss */
 .intro-btn {
   overflow: hidden;
   text-align: center;
 }
-/* line 302, ../scss/pages/_home.scss */
+/* line 303, ../scss/pages/_home.scss */
 .intro-btn article {
   padding: 1.25rem 1.5625rem 0;
 }
-/* line 307, ../scss/pages/_home.scss */
+/* line 308, ../scss/pages/_home.scss */
 .intro-btn h2 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
 }
-/* line 311, ../scss/pages/_home.scss */
+/* line 312, ../scss/pages/_home.scss */
 .intro-btn h2 a {
   color: #444;
 }
-/* line 313, ../scss/pages/_home.scss */
+/* line 314, ../scss/pages/_home.scss */
 .intro-btn h2 a:hover {
   color: #009bdf;
   text-decoration: none;
 }
-/* line 319, ../scss/pages/_home.scss */
+/* line 320, ../scss/pages/_home.scss */
 .intro-btn p {
   font-size: 0.875rem;
 }
-/* line 322, ../scss/pages/_home.scss */
+/* line 323, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img {
   margin: 0 0 0.9375rem 0;
 }
-/* line 324, ../scss/pages/_home.scss */
+/* line 325, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img a img {
   display: inherit;
 }
@@ -1714,26 +1718,26 @@ Call to Action
 /*-------------------------------
 Headline
 -------------------------------*/
-/* line 333, ../scss/pages/_home.scss */
+/* line 334, ../scss/pages/_home.scss */
 .headline-mod {
   margin: 1.25rem 0;
 }
-/* line 335, ../scss/pages/_home.scss */
+/* line 336, ../scss/pages/_home.scss */
 .headline-mod .headline-content {
   text-align: right;
 }
-/* line 337, ../scss/pages/_home.scss */
+/* line 338, ../scss/pages/_home.scss */
 .headline-mod .headline-content h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
-/* line 342, ../scss/pages/_home.scss */
+/* line 343, ../scss/pages/_home.scss */
 .headline-mod .headline-content h4.subheader {
   font-size: 1.25rem;
   margin-top: 0;
 }
-/* line 348, ../scss/pages/_home.scss */
+/* line 349, ../scss/pages/_home.scss */
 .headline-mod .flex-video {
   margin-top: 1rem;
 }
@@ -1741,18 +1745,18 @@ Headline
 /*-------------------------------
 Definition List Mod
 -------------------------------*/
-/* line 356, ../scss/pages/_home.scss */
+/* line 357, ../scss/pages/_home.scss */
 .mod-def-list {
   margin: 1.875rem 0 0 0;
   overflow: hidden;
 }
-/* line 359, ../scss/pages/_home.scss */
+/* line 360, ../scss/pages/_home.scss */
 .mod-def-list .mod-def-list-content {
   text-align: center;
   margin-bottom: 1.5625rem;
 }
 
-/* line 366, ../scss/pages/_home.scss */
+/* line 367, ../scss/pages/_home.scss */
 dl.def-list i {
   font-size: 1.875rem;
   color: #5f5f5f;
@@ -1760,18 +1764,18 @@ dl.def-list i {
   position: relative;
   top: -0.125rem;
 }
-/* line 373, ../scss/pages/_home.scss */
+/* line 374, ../scss/pages/_home.scss */
 dl.def-list img {
   margin-bottom: 0.625rem;
 }
-/* line 377, ../scss/pages/_home.scss */
+/* line 378, ../scss/pages/_home.scss */
 dl.def-list dt h4 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 386, ../scss/pages/_home.scss */
+/* line 387, ../scss/pages/_home.scss */
 dl.def-list dd {
   font-size: 0.875rem;
 }
@@ -1779,7 +1783,7 @@ dl.def-list dd {
 /*-------------------------------
 Testimonial  Mod
 -------------------------------*/
-/* line 394, ../scss/pages/_home.scss */
+/* line 395, ../scss/pages/_home.scss */
 .testimonial-post {
   display: block;
   padding: 1.6em 1.6em 1.6em 2em;
@@ -1792,12 +1796,12 @@ Testimonial  Mod
   transition: background-color 0.25s;
   background: rgba(0, 0, 0, 0.02) url(../img/blockquote_bg.png) no-repeat 15px 15px;
 }
-/* line 401, ../scss/pages/_home.scss */
+/* line 402, ../scss/pages/_home.scss */
 .testimonial-post:hover {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-/* line 407, ../scss/pages/_home.scss */
+/* line 408, ../scss/pages/_home.scss */
 .testimonial_excerpt_container > p {
   color: rgba(0, 0, 0, 0.7);
   text-align: right;
@@ -1808,7 +1812,7 @@ Testimonial  Mod
   font-family: "Lucida Bright", Georgia, serif;
 }
 
-/* line 417, ../scss/pages/_home.scss */
+/* line 418, ../scss/pages/_home.scss */
 .testimonial_author {
   text-align: right;
   margin-top: 1.6em;
@@ -1816,9 +1820,19 @@ Testimonial  Mod
   color: black;
   font-weight: bold;
 }
-/* line 425, ../scss/pages/_home.scss */
+/* line 426, ../scss/pages/_home.scss */
 .testimonial_author span {
   font-weight: normal;
+}
+
+/** LYBE: Björn [Alter ALL Mod <hr> looks here] **/
+/* line 434, ../scss/pages/_home.scss */
+.mod-headline hr {
+  border-color: transparent;
+}
+/* line 435, ../scss/pages/_home.scss */
+.mod-post hr {
+  border-color: transparent;
 }
 
 /*-------------------------------

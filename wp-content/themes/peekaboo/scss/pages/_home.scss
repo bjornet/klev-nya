@@ -228,7 +228,8 @@ Content
 Featured Post
 -------------------------------*/
 
-/** LYBE: Björn [Center symbol] **/
+.featured-title a { color: $pkb-secondary-color; }
+
 .featured-post {
 	.entry-title {
 		font-weight: 300;
@@ -252,9 +253,9 @@ Featured Post
 
 
 .entry-title a {
-  color: $pkb-primary-color;
+  color: $pkb-secondary-color;
   &:hover {
-    color: $pkb-secondary-color;
+    color: #000;
     text-decoration: none;
   }
 }
@@ -426,4 +427,10 @@ Testimonial  Mod
     font-weight: normal;
   }
 
+}
+
+/** LYBE: Björn [Alter ALL Mod <hr> looks here] **/
+hr {
+	.mod-headline & { border-color: transparent; }
+	.mod-post & { border-color: transparent; }
 }

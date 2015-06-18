@@ -16,21 +16,23 @@ function getFeaturedImage($postCats, $listCats){
 		}
 	}
 }
+// This setup supports old PHP v.
+$uploadDir = wp_upload_dir();
+$uploadDir = $uploadDir['baseurl'];
 ?>
-
-<div class="row">
-    <hr>
+<div class="row mod-post">
+	<hr>
 </div>
 
 <?php if ($smof_data['pkb_post_mod_title']) { ?>
     <div class="row section-title">
         <div class="columns large-10">
             <?php if ($smof_data['pkb_post_mod_url']) { ?>
-                <h4 class="replace"><a
+                <h4 class="replace featured-title"><a
                         href="?p=<?php echo stripslashes($smof_data['pkb_post_mod_url']); ?>"><?php echo stripslashes($smof_data['pkb_post_mod_title']); ?></a>
                 </h4>
             <?php } else { ?>
-                <h4 class="replace"><?php echo stripslashes($smof_data['pkb_post_mod_title']); ?></h4>
+                <h4 class="replace featured-title"><?php echo stripslashes($smof_data['pkb_post_mod_title']); ?></h4>
             <?php } ?>
 
         </div>
@@ -72,7 +74,7 @@ function getFeaturedImage($postCats, $listCats){
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -102,7 +104,7 @@ function getFeaturedImage($postCats, $listCats){
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -134,7 +136,7 @@ function getFeaturedImage($postCats, $listCats){
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -166,7 +168,7 @@ function getFeaturedImage($postCats, $listCats){
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
