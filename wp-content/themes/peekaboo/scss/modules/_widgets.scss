@@ -19,7 +19,14 @@ Common styles
         font-size: 20px;
         font-size: 1.286rem;
         font-weight: 400;
+
+		/** LYBE: Björn [Hide Admin Widget CTA - Title] **/
+		display: none;
     }
+	
+	/** LYBE: Björn [Keep showing "Kontakt", "Röe"-länk] **/
+	&.pkb_widget_contact > h4, &.pkb_widget_ad > h4 { display: block; }
+	
     a {
         color: #4F4F4F;
     }
@@ -430,3 +437,22 @@ ul.submenu {
         }
     }
 }
+
+
+/** LYBE: Björn [CTA:s in right column] **/
+.widget-vaxtodling, .widget-hons, .widget-grisar { display: none; }
+
+.widget-vaxtodling .replace,
+.widget-hons .replace,
+.widget-grisar .replace {
+    border-bottom: 3px dotted #CCC;
+    padding: 0 0 8px;
+    font-size: 20px;
+    font-size: 1.286rem;
+    font-weight: 400;
+}
+
+/** LYBE: Björn [Show CTA on specific page] **/
+.page-id-906 .widget-vaxtodling { display: block; }
+.page-id-36 .widget-hons { display: block; }
+.page-id-85 .widget-grisar { display: block; }

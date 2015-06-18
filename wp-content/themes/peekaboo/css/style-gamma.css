@@ -3045,6 +3045,7 @@ Common styles
   margin: 0 0 15px;
   font-size: 14px;
   font-size: 0.875rem;
+  /** LYBE: Björn [Keep showing "Kontakt", "Röe"-länk] **/
 }
 /* line 16, ../scss/modules/_widgets.scss */
 .sidebar-widget > h4 {
@@ -3053,76 +3054,82 @@ Common styles
   font-size: 20px;
   font-size: 1.286rem;
   font-weight: 400;
+  /** LYBE: Björn [Hide Admin Widget CTA - Title] **/
+  display: none;
 }
-/* line 23, ../scss/modules/_widgets.scss */
+/* line 28, ../scss/modules/_widgets.scss */
+.sidebar-widget.pkb_widget_contact > h4, .sidebar-widget.pkb_widget_ad > h4 {
+  display: block;
+}
+/* line 30, ../scss/modules/_widgets.scss */
 .sidebar-widget a {
   color: #4F4F4F;
 }
-/* line 26, ../scss/modules/_widgets.scss */
+/* line 33, ../scss/modules/_widgets.scss */
 .sidebar-widget.last {
   margin: 0;
 }
-/* line 29, ../scss/modules/_widgets.scss */
+/* line 36, ../scss/modules/_widgets.scss */
 .sidebar-widget a:hover {
   color: #406f29;
   text-decoration: none;
 }
-/* line 33, ../scss/modules/_widgets.scss */
+/* line 40, ../scss/modules/_widgets.scss */
 .sidebar-widget ul {
   list-style-type: none;
   margin: 0;
   padding: 0 0 0 20px;
 }
-/* line 37, ../scss/modules/_widgets.scss */
+/* line 44, ../scss/modules/_widgets.scss */
 .sidebar-widget ul li {
   line-height: 1.5;
   padding: 0 0 8px;
   list-style: url(../img/list-bullet.jpg);
 }
-/* line 41, ../scss/modules/_widgets.scss */
+/* line 48, ../scss/modules/_widgets.scss */
 .sidebar-widget ul li:last-child {
   padding-bottom: 0;
 }
-/* line 44, ../scss/modules/_widgets.scss */
+/* line 51, ../scss/modules/_widgets.scss */
 .sidebar-widget ul li a {
   /*font-weight: bold; */
 }
 
-/* line 51, ../scss/modules/_widgets.scss */
+/* line 58, ../scss/modules/_widgets.scss */
 .widget_recent_entries, .widget_pages, .widget_nav_menu, .widget_categories, .widget_archive, .widget_recent_comments, .widget_rss, .widget_tag_cloud, .widget_meta, .widget_links, .pkb_widget_latest_post, .pkb_widget_popular, .pkb_widget_single_post {
   border: 5px solid #e05a8b;
   padding: 15px 20px;
 }
 
 /* Footer Widget */
-/* line 57, ../scss/modules/_widgets.scss */
+/* line 64, ../scss/modules/_widgets.scss */
 .footer-widget {
   border: 0 none;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-/* line 61, ../scss/modules/_widgets.scss */
+/* line 68, ../scss/modules/_widgets.scss */
 .footer-widget a.url {
   color: #F5CF47;
 }
-/* line 64, ../scss/modules/_widgets.scss */
+/* line 71, ../scss/modules/_widgets.scss */
 .footer-widget .textwidget, .footer-widget .recentcomments, .footer-widget #wp-calendar caption {
   color: #FFF;
 }
-/* line 67, ../scss/modules/_widgets.scss */
+/* line 74, ../scss/modules/_widgets.scss */
 .footer-widget li {
   background: url(../img/bullet-arrow.png) no-repeat left 5px;
   display: block;
   padding-left: 17px;
 }
 
-/* line 75, ../scss/modules/_widgets.scss */
+/* line 82, ../scss/modules/_widgets.scss */
 #footer .widget_archive, #footer .widget_categories, #footer .widget_links, #footer .widget_pages, #footer .pkb_widget_single_post, #footer .widget_recent_entries, #footer .widget_tag_cloud, #footer .widget_nav_menu, #footer .widget_meta, #footer .pkb_widget_latest_post, #footer .widget_recent_comments, #footer .pkb_widget_contact, #footer .pkb_widget_popular, #footer .pkb_widget_map, #footer .widget_calendar, #footer .pkb_widget_ad, #footer .pkb_widget_download, #footer .pkb_widget_video, #footer .pkb_widget_testimonial, #footer .pkb_widget_social {
   padding: 0 0 15px;
 }
 
 /* Home page Widget */
-/* line 81, ../scss/modules/_widgets.scss */
+/* line 88, ../scss/modules/_widgets.scss */
 .landing_col .widget {
   border: none;
   padding: 0;
@@ -3133,25 +3140,25 @@ Common styles
 Default Widgets
 -------------------------------*/
 /* Search Widget*/
-/* line 93, ../scss/modules/_widgets.scss */
+/* line 100, ../scss/modules/_widgets.scss */
 #searchform .button {
   box-shadow: none;
   font-style: normal;
 }
 
 /* Pages Links Widget*/
-/* line 99, ../scss/modules/_widgets.scss */
+/* line 106, ../scss/modules/_widgets.scss */
 .widget_pages ul.children {
   margin-top: 10px;
 }
 
 /* Calendar Widget */
-/* line 104, ../scss/modules/_widgets.scss */
+/* line 111, ../scss/modules/_widgets.scss */
 #wp-calendar {
   margin-top: 0;
 }
 
-/* line 109, ../scss/modules/_widgets.scss */
+/* line 116, ../scss/modules/_widgets.scss */
 #calendar_wrap table td, #calendar_wrap table th {
   padding: 0;
 }
@@ -3160,35 +3167,35 @@ Default Widgets
 Custom Widgets
 -------------------------------*/
 /*Ad widget*/
-/* line 119, ../scss/modules/_widgets.scss */
+/* line 126, ../scss/modules/_widgets.scss */
 .pkb_widget_ad img {
   border: 1px solid #CCC;
 }
 
 /*Twitter widget*/
-/* line 124, ../scss/modules/_widgets.scss */
+/* line 131, ../scss/modules/_widgets.scss */
 .tweet_list li {
   background: url(../img/quote-begin.png) no-repeat top left;
   padding-left: 30px;
   padding-bottom: 15px;
   list-style: none;
 }
-/* line 129, ../scss/modules/_widgets.scss */
+/* line 136, ../scss/modules/_widgets.scss */
 .tweet_list li a {
   color: #F5CF47;
   font-weight: normal;
 }
-/* line 130, ../scss/modules/_widgets.scss */
+/* line 137, ../scss/modules/_widgets.scss */
 .tweet_list li a:hover {
   font-weight: normal;
   color: #4f4f4f;
 }
 
-/* line 139, ../scss/modules/_widgets.scss */
+/* line 146, ../scss/modules/_widgets.scss */
 #sidebar .tweet_list {
   padding-left: 0;
 }
-/* line 141, ../scss/modules/_widgets.scss */
+/* line 148, ../scss/modules/_widgets.scss */
 #sidebar .tweet_list li {
   padding-left: 0;
   padding-bottom: 15px;
@@ -3197,27 +3204,27 @@ Custom Widgets
   line-height: 1.4;
   word-wrap: break-word;
 }
-/* line 148, ../scss/modules/_widgets.scss */
+/* line 155, ../scss/modules/_widgets.scss */
 #sidebar .tweet_list li a {
   font-weight: normal;
 }
 
-/* line 154, ../scss/modules/_widgets.scss */
+/* line 161, ../scss/modules/_widgets.scss */
 .tweet_list .tweet_text, #footer .tweet_text {
   list-style-type: none;
   display: block;
 }
 
-/* line 159, ../scss/modules/_widgets.scss */
+/* line 166, ../scss/modules/_widgets.scss */
 .tweet_list .tweet_text a, #footer .tweet_list .tweet_text a {
   display: inline;
 }
 
-/* line 163, ../scss/modules/_widgets.scss */
+/* line 170, ../scss/modules/_widgets.scss */
 .tweet_list .tweet_time {
   display: block;
 }
-/* line 165, ../scss/modules/_widgets.scss */
+/* line 172, ../scss/modules/_widgets.scss */
 .tweet_list .tweet_time a {
   font-size: 12px;
   font-style: normal;
@@ -3225,41 +3232,41 @@ Custom Widgets
   color: #7d7d7d;
 }
 
-/* line 174, ../scss/modules/_widgets.scss */
+/* line 181, ../scss/modules/_widgets.scss */
 #footer .tweet_list .tweet_time a {
   font-size: 12px;
   font-style: normal;
   padding: 5px 0;
   color: #7d7d7d;
 }
-/* line 180, ../scss/modules/_widgets.scss */
+/* line 187, ../scss/modules/_widgets.scss */
 #footer .tweet_list li {
   line-height: 1.25;
   color: #FFF;
 }
-/* line 183, ../scss/modules/_widgets.scss */
+/* line 190, ../scss/modules/_widgets.scss */
 #footer .tweet_list li a {
   color: #F5CF47;
 }
-/* line 185, ../scss/modules/_widgets.scss */
+/* line 192, ../scss/modules/_widgets.scss */
 #footer .tweet_list li a:hover {
   color: #FFF;
   text-decoration: none;
 }
-/* line 191, ../scss/modules/_widgets.scss */
+/* line 198, ../scss/modules/_widgets.scss */
 #footer .tweet_list .tweet_time a {
   color: #ededed;
 }
 
 /* Testimonial Widget*/
-/* line 197, ../scss/modules/_widgets.scss */
+/* line 204, ../scss/modules/_widgets.scss */
 .testimonials-container {
   background: #4fe3ea url(../img/chat.png) no-repeat 10px 10px;
   padding: 15px 10px 0 20px;
   border: 5px solid #11898F;
   font-weight: normal;
 }
-/* line 202, ../scss/modules/_widgets.scss */
+/* line 209, ../scss/modules/_widgets.scss */
 .testimonials-container h3 {
   padding: 4px 0 0 58px;
   line-height: normal;
@@ -3267,38 +3274,38 @@ Custom Widgets
   color: #444;
 }
 
-/* line 210, ../scss/modules/_widgets.scss */
+/* line 217, ../scss/modules/_widgets.scss */
 #footer .testimonials-container h3 a {
   color: #444;
 }
-/* line 212, ../scss/modules/_widgets.scss */
+/* line 219, ../scss/modules/_widgets.scss */
 #footer .testimonials-container h3 a:hover {
   text-decoration: none;
 }
 
-/* line 217, ../scss/modules/_widgets.scss */
+/* line 224, ../scss/modules/_widgets.scss */
 .testimonials-container .testimonial-name {
   font-size: 13px;
 }
 
-/* line 221, ../scss/modules/_widgets.scss */
+/* line 228, ../scss/modules/_widgets.scss */
 .testimonials-content {
   padding-bottom: 15px;
 }
-/* line 223, ../scss/modules/_widgets.scss */
+/* line 230, ../scss/modules/_widgets.scss */
 .testimonials-content p {
   margin-bottom: 6px;
 }
 
 /* Map Widget*/
-/* line 229, ../scss/modules/_widgets.scss */
+/* line 236, ../scss/modules/_widgets.scss */
 .directions {
   border: 5px solid #622d67;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 232, ../scss/modules/_widgets.scss */
+/* line 239, ../scss/modules/_widgets.scss */
 .directions h3 {
   margin-bottom: 0;
   margin-top: 0;
@@ -3306,7 +3313,7 @@ Custom Widgets
   line-height: 0.75;
   font-weight: 600;
 }
-/* line 238, ../scss/modules/_widgets.scss */
+/* line 245, ../scss/modules/_widgets.scss */
 .directions h3 a {
   color: #444;
   padding: 1.5625rem 30% 1.5625rem 5%;
@@ -3315,136 +3322,136 @@ Custom Widgets
   display: block;
   margin: 0;
 }
-/* line 245, ../scss/modules/_widgets.scss */
+/* line 252, ../scss/modules/_widgets.scss */
 .directions h3 a:hover {
   text-decoration: none;
   background-color: #c17fc7;
   color: #444;
 }
-/* line 252, ../scss/modules/_widgets.scss */
+/* line 259, ../scss/modules/_widgets.scss */
 .directions h3 span {
   font-size: 13px;
   font-weight: normal;
 }
 
-/* line 259, ../scss/modules/_widgets.scss */
+/* line 266, ../scss/modules/_widgets.scss */
 #footer .directions a {
   color: #444;
 }
 
 /* Post Widget */
-/* line 264, ../scss/modules/_widgets.scss */
+/* line 271, ../scss/modules/_widgets.scss */
 .pkb-post-list ul {
   padding-left: 0;
 }
-/* line 266, ../scss/modules/_widgets.scss */
+/* line 273, ../scss/modules/_widgets.scss */
 .pkb-post-list ul li {
   list-style: none !important;
   padding-bottom: 15px;
   font-size: 13px;
 }
-/* line 270, ../scss/modules/_widgets.scss */
+/* line 277, ../scss/modules/_widgets.scss */
 .pkb-post-list ul li img {
   margin: 4px 6px 6px 0;
 }
 
-/* line 276, ../scss/modules/_widgets.scss */
+/* line 283, ../scss/modules/_widgets.scss */
 #footer .pkb-post-list li {
   background: none;
   padding-left: 0;
 }
 
 /* Single Post Widget */
-/* line 283, ../scss/modules/_widgets.scss */
+/* line 290, ../scss/modules/_widgets.scss */
 .pkb_widget_single_post h5 a {
   color: #622d67;
 }
-/* line 286, ../scss/modules/_widgets.scss */
+/* line 293, ../scss/modules/_widgets.scss */
 .pkb_widget_single_post p {
   margin-bottom: 7px;
 }
-/* line 288, ../scss/modules/_widgets.scss */
+/* line 295, ../scss/modules/_widgets.scss */
 .pkb_widget_single_post p a {
   color: #406f29;
 }
 
-/* line 294, ../scss/modules/_widgets.scss */
+/* line 301, ../scss/modules/_widgets.scss */
 #footer .pkb_widget_single_post {
   color: #FFF;
 }
-/* line 296, ../scss/modules/_widgets.scss */
+/* line 303, ../scss/modules/_widgets.scss */
 #footer .pkb_widget_single_post a {
   color: #F5CF47;
 }
 
 /* Download Widget */
-/* line 302, ../scss/modules/_widgets.scss */
+/* line 309, ../scss/modules/_widgets.scss */
 .download {
   border: 5px solid #AF1552;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 306, ../scss/modules/_widgets.scss */
+/* line 313, ../scss/modules/_widgets.scss */
 .download h3 {
   margin-bottom: 0;
   margin-top: 0;
   font-size: 1.5625rem;
   line-height: 0.75;
 }
-/* line 311, ../scss/modules/_widgets.scss */
+/* line 318, ../scss/modules/_widgets.scss */
 .download h3 a {
   padding: 0.9375rem 30% 0.9375rem 5%;
   background: #f39dbf url(../img/download.png) no-repeat 94% center;
   display: block;
 }
-/* line 315, ../scss/modules/_widgets.scss */
+/* line 322, ../scss/modules/_widgets.scss */
 .download h3 a:hover {
   background-color: #f086b0;
   color: #4F4F4F;
 }
-/* line 320, ../scss/modules/_widgets.scss */
+/* line 327, ../scss/modules/_widgets.scss */
 .download h3 span {
   font-size: 0.8125rem;
   font-weight: normal;
 }
 
-/* line 327, ../scss/modules/_widgets.scss */
+/* line 334, ../scss/modules/_widgets.scss */
 #footer .download a {
   color: #444;
 }
-/* line 329, ../scss/modules/_widgets.scss */
+/* line 336, ../scss/modules/_widgets.scss */
 #footer .download a:hover {
   text-decoration: none;
 }
 
 /* Social Widget */
-/* line 335, ../scss/modules/_widgets.scss */
+/* line 342, ../scss/modules/_widgets.scss */
 ul.social_icons {
   padding-left: 0;
   /** LYBE: Björn [Align vertical] **/
   margin-left: -4px;
 }
 
-/* line 342, ../scss/modules/_widgets.scss */
+/* line 349, ../scss/modules/_widgets.scss */
 .social_icons li, #footer .social_icons li {
   display: inline;
   background: none;
   margin: 0 0.3125rem 0.3125rem 0;
   padding: 0;
 }
-/* line 347, ../scss/modules/_widgets.scss */
+/* line 354, ../scss/modules/_widgets.scss */
 .social_icons li a, #footer .social_icons li a {
   font-size: 1.875rem;
   color: #d75685;
 }
-/* line 350, ../scss/modules/_widgets.scss */
+/* line 357, ../scss/modules/_widgets.scss */
 .social_icons li a:hover, #footer .social_icons li a:hover {
   color: #F5CF47;
 }
 
 /* Contact Widget */
-/* line 358, ../scss/modules/_widgets.scss */
+/* line 365, ../scss/modules/_widgets.scss */
 .modalmap {
   background: url(../img/map-pin.png) no-repeat top left;
   display: block;
@@ -3454,33 +3461,33 @@ ul.social_icons {
   line-height: 1.7;
 }
 
-/* line 367, ../scss/modules/_widgets.scss */
+/* line 374, ../scss/modules/_widgets.scss */
 a.modalmap:hover {
   background: url(../img/map-pin.png) no-repeat left 1px;
   text-decoration: none;
 }
 
 /* Misc Widget Properties */
-/* line 373, ../scss/modules/_widgets.scss */
+/* line 380, ../scss/modules/_widgets.scss */
 .meta-sidebar {
   font-size: 0.6875rem;
   line-height: normal;
   color: #6F6F6F;
 }
-/* line 377, ../scss/modules/_widgets.scss */
+/* line 384, ../scss/modules/_widgets.scss */
 .meta-sidebar a {
   font-weight: normal;
   color: #6F6F6F;
 }
 
 /* Sub pages navigation */
-/* line 384, ../scss/modules/_widgets.scss */
+/* line 391, ../scss/modules/_widgets.scss */
 .submenu_container {
   background: rgba(0, 0, 0, 0.05);
   margin: 0 0 0.9375rem;
 }
 
-/* line 389, ../scss/modules/_widgets.scss */
+/* line 396, ../scss/modules/_widgets.scss */
 ul.submenu {
   padding: 0.25rem;
   list-style: none;
@@ -3489,7 +3496,7 @@ ul.submenu {
   font-size: 0.875rem;
   margin: 0;
 }
-/* line 397, ../scss/modules/_widgets.scss */
+/* line 404, ../scss/modules/_widgets.scss */
 ul.submenu li a {
   display: block;
   color: #4F4F4F;
@@ -3501,38 +3508,71 @@ ul.submenu li a {
   -webkit-transition: background 200ms ease;
   transition: background 200ms ease;
 }
-/* line 405, ../scss/modules/_widgets.scss */
+/* line 412, ../scss/modules/_widgets.scss */
 ul.submenu li .fonticon {
   font-size: 1.125rem;
   position: relative;
   top: 1px;
 }
-/* line 410, ../scss/modules/_widgets.scss */
+/* line 417, ../scss/modules/_widgets.scss */
 ul.submenu li.current_page_item > a {
   color: #622d67;
 }
-/* line 413, ../scss/modules/_widgets.scss */
+/* line 420, ../scss/modules/_widgets.scss */
 ul.submenu li a:hover {
   background-color: rgba(0, 0, 0, 0.05);
   text-decoration: none;
 }
-/* line 418, ../scss/modules/_widgets.scss */
+/* line 425, ../scss/modules/_widgets.scss */
 ul.submenu ul {
   margin-bottom: 0;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 422, ../scss/modules/_widgets.scss */
+/* line 429, ../scss/modules/_widgets.scss */
 ul.submenu ul li {
   list-style: none;
 }
-/* line 426, ../scss/modules/_widgets.scss */
+/* line 433, ../scss/modules/_widgets.scss */
 ul.submenu li li a {
   padding-left: 1.875rem;
 }
-/* line 428, ../scss/modules/_widgets.scss */
+/* line 435, ../scss/modules/_widgets.scss */
 ul.submenu li li a:hover {
   padding-left: 1.875rem;
+}
+
+/** LYBE: Björn [CTA:s in right column] **/
+/* line 443, ../scss/modules/_widgets.scss */
+.widget-vaxtodling, .widget-hons, .widget-grisar {
+  display: none;
+}
+
+/* line 445, ../scss/modules/_widgets.scss */
+.widget-vaxtodling .replace,
+.widget-hons .replace,
+.widget-grisar .replace {
+  border-bottom: 3px dotted #CCC;
+  padding: 0 0 8px;
+  font-size: 20px;
+  font-size: 1.286rem;
+  font-weight: 400;
+}
+
+/** LYBE: Björn [Show CTA on specific page] **/
+/* line 456, ../scss/modules/_widgets.scss */
+.page-id-906 .widget-vaxtodling {
+  display: block;
+}
+
+/* line 457, ../scss/modules/_widgets.scss */
+.page-id-36 .widget-hons {
+  display: block;
+}
+
+/* line 458, ../scss/modules/_widgets.scss */
+.page-id-85 .widget-grisar {
+  display: block;
 }
 
 /*------------------------------------------------------------------

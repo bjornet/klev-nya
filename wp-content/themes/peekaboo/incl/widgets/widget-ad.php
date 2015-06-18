@@ -94,7 +94,7 @@ class pkb_widget_ad extends WP_Widget
         if ($title)
             echo $before_title . $title . $after_title;
         if ($link)
-            echo '<a href="' . $link . '"><img class="shadow-light" src="' . $img_src . '" /></a>';
+            echo '<a href="' . $link . '" target="_blank"><img class="shadow-light" src="' . $img_src . '" /></a>';
         elseif ($img_src)
             echo '<img class="shadow-light" src="' . $img_src . '" />';
         echo $after_widget;
