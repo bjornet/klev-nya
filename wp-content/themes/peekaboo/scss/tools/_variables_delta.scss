@@ -71,7 +71,8 @@ $trebuchet-type: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bit
 }
 
 /** LYBE: Björn [Override for Klev Typography] **/
-$serif-type: "Calibri", Helvetica, Arial, sans-serif;
+//$serif-type: "Calibri", Helvetica, Arial, sans-serif;
+$serif-type: Helvetica, Arial, sans-serif;
 $helvetica-type: $serif-type;
 $trebuchet-type: $serif-type;
 $mentone-type: "Mentone", Helvetica, Arial, sans-serif;

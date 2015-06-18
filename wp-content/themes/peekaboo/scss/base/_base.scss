@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
 }
 
+p {
+	/** LYBE: Björn [Contact] **/
+	#content & { margin: 0; }	
+}
+
 a {
     text-decoration: none;
     color: $pkb-primary-color;
@@ -157,3 +162,10 @@ q {
         content: '';
     }
 }
+
+/** LYBE: Björn [HELPERS] **/
+// Width:s
+.widthx1 { width: 100%; }
+.widthx2 { width: 200%; }
+.widthx3 { width: 300%; }
+.widthx4 { width: 400%; }

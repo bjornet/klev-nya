@@ -3,6 +3,9 @@ Structure
 -------------------------------*/
 
 /*Area to place content normally*/
+body {
+	background-color: $body-bg;
+}
 
 #content-wrapper {
     width: 100%;

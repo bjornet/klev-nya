@@ -17,9 +17,3 @@ License URI: http://themeforest.net/wiki/support/legal-terms/licensing-terms/
     scss/style.scss.
 
 -------------------------------------------------- */
-
-/** LYBE: Björn [Contact] **/
-#content p { margin: 0; }
-
-/** LYBE: Björn [Flexslider] **/
-.flexslider { min-height: initial; }

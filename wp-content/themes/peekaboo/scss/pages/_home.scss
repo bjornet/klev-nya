@@ -105,45 +105,68 @@ Quick Menu
 }
 
 .overview {
-  li {
-    line-height: 1.4;
-    position: relative;
-    padding: 0 0.313em;
+	li {
+		line-height: 1.4;
+		position: relative;
+		padding: 0 0.313em;
 
-    .menu-box {
-      background: $button-two;
-      background-repeat: no-repeat;
-      background-position: 7% 1.167em;
-      background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-      background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-      background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-      background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-      background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
-      display: block;
-      font-size: rem-calc(12);
-      color: #FFF;
-      padding: 10px 15px 10px 65px;
-      height: rem-calc(70);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-      @include single-box-shadow(0, 0, 0, 0, black(0), true);
-      @include border-radius(0);
-      position: relative;
-      &:hover {
-        background-color: darken($button-two, 8%);
-        text-decoration: none;
-      }
-    }
-  }
-  span.title {
-    color: #FFF;
-    font-weight: bold;
-    font-size: rem-calc(16);
-    top: 50%;
-    margin-top: -12px;
-    // Adjust this if the menu title is more than 1 line.
-    position: absolute;
-  }
+		.menu-box {
+			background: $button-two;
+			background-repeat: no-repeat;
+			//      background-position: 7% 1.167em;
+			background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+			background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+			background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+			background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+			background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+			display: block;
+			font-size: rem-calc(12);
+			color: #FFF;
+			padding: 10px 15px 10px 65px;
+			height: rem-calc(70);
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+			@include single-box-shadow(0, 0, 0, 0, black(0), true);
+			@include border-radius(0);
+			position: relative;
+			&:hover {
+				background-color: darken($button-two, 8%);
+				text-decoration: none;
+			}
+		}
+
+		/** LYBE: Björn [Green buttons: Background Icons] **/
+		&.quickmenu-item-1 .menu-box {
+			background-size: 29%;
+			background-position: 4px 25px;
+			padding-left: 74px;
+		}
+		&.quickmenu-item-2 .menu-box {
+			background-size: 25%;
+			background-position: 5px 22px;
+			padding-left: 86px;
+		}
+		&.quickmenu-item-3 .menu-box {
+			background-size: 35%;
+			background-position: 5px 29px;
+			padding-left: 70px;
+		}
+		&.quickmenu-item-4 .menu-box {
+			background-size: 47%;
+			background-position: 4px 25px;
+			padding-left: 77px;
+		}
+
+	}
+	span.title {
+		color: #FFF;
+		font-weight: bold;
+		font-size: rem-calc(16);
+		top: 50%;
+		margin-top: -12px;
+		// Adjust this if the menu title is more than 1 line.
+		position: absolute;
+	}
 }
 
 @media only screen and (min-width: rem-calc(479)) { /* min-width 479px, medium screens */
@@ -204,10 +227,29 @@ Content
 /*-------------------------------
 Featured Post
 -------------------------------*/
-.featured-post .entry-title {
-  font-weight: 300;
-  font-size: 1.3em;
-}
+
+/** LYBE: Björn [Center symbol] **/
+.featured-post {
+	.entry-title {
+		font-weight: 300;
+ 	    font-size: 1.3em;
+  	   	line-height: 1.15;
+	}
+	.post-module {
+		a {
+		    padding: 10px 0 0;
+		    display: block;
+		    .figure-img {
+				max-height: 100px;
+		   		margin: 0 auto;
+		   		display: block;
+		   	}
+		}
+
+		.excerpt_container { padding-top: 5px; }
+	}
+} 
+
 
 .entry-title a {
   color: $pkb-primary-color;

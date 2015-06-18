@@ -46,16 +46,15 @@ global $smof_data;
         <div id="header" class=" ">
 
 			<?php # LYBE: Björn [Hard coded: Header Top] ?>
-			<div class="large-12 small-12 columns header-top">
-			<?php
-				$headerTop = get_post(1239); //header top ID
-				echo $headerTop->post_content;
-			?>
+			<div class="large-12 small-12 columns header-top-wrapper">
+				<div class="header-top contain-to-grid">
+					<?php echo get_post(1239)->post_content; // header top ID ?>
+				</div>
 			</div>
 
 			<div class="row">
 
-                <div class="large-3 small-12 columns">
+                <div class="large-3 small-12 columns logo-wrapper">
 
                     <!-- Logo begin -->
                     <div id="logo">

@@ -12,9 +12,7 @@
         @include single-box-shadow(0, 0, 2px, 0, black(0.2), false)
     }
 
-    .flexslider {
-        min-height: 360px;
-    }
+	/** LYBE: Björn [Removed min-height on .flexslider] **/
 }
 
 @media only screen and (min-width: 768px) {

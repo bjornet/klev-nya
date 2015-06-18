@@ -1,3 +1,23 @@
+<?php
+# LYBE: Björn [All pairs of category/image]
+$listKlevCats = array(
+	"hons"				=> '/2015/06/Höna-ikon-2.jpg',
+	"klevs-lantbruk"	=> '/2015/05/test-02.png',
+	"gris"				=> '/2015/06/Gris-ikon-2.jpg',
+	"entreprenad"		=> '/2015/06/Lastmaskin-ikon.jpg',
+	"vaxtodling"		=> '/2015/06/Ax-ikon-2.jpg'
+);
+
+# LYBE: Björn [Returns Image Src matching posts category]
+function getFeaturedImage($postCats, $listCats){
+	foreach ($listCats as $cat => $src) {
+		foreach ($postCats as $postCat) {
+			if ($cat == $postCat->slug) { return $src; }
+		}
+	}
+}
+?>
+
 <div class="row">
     <hr>
 </div>
@@ -48,9 +68,12 @@
                 while ($the_query->have_posts()) : $the_query->the_post();?>
                     <div class="post-module">
 
-                        <?php if ((has_post_thumbnail() && function_exists('has_post_thumbnail'))) { ?>
-                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('pkb-post-image-home'); ?> </a>
-                        <?php } ?>
+						<?php # LYBE: Björn [Render Category Symbol] ?>
+						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
+						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
+						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
                                                                title="<?php printf(esc_attr__('Permalink to %s', 'peekaboo'), the_title_attribute('echo=0')); ?>"
@@ -75,11 +98,12 @@
                 while ($the_query->have_posts()) : $the_query->the_post();?>
                     <div class="post-module">
 
-                        <?php if ((has_post_thumbnail() && function_exists('has_post_thumbnail'))) { ?>
-                            <div class="figure"><a
-                                    href="<?php the_permalink() ?>"><?php the_post_thumbnail('pkb-post-image-home'); ?> </a>
-                            </div>
-                        <?php } ?>
+						<?php # LYBE: Björn [Render Category Symbol] ?>
+						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
+						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
+						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
                                                                title="<?php printf(esc_attr__('Permalink to %s', 'peekaboo'), the_title_attribute('echo=0')); ?>"
@@ -106,11 +130,12 @@
                 while ($the_query->have_posts()) : $the_query->the_post();?>
                     <div class="post-module">
 
-                        <?php if ((has_post_thumbnail() && function_exists('has_post_thumbnail'))) { ?>
-                            <div class="figure"><a
-                                    href="<?php the_permalink() ?>"><?php the_post_thumbnail('pkb-post-image-home'); ?> </a>
-                            </div>
-                        <?php } ?>
+						<?php # LYBE: Björn [Render Category Symbol] ?>
+						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
+						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
+						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
                                                                title="<?php printf(esc_attr__('Permalink to %s', 'peekaboo'), the_title_attribute('echo=0')); ?>"
@@ -137,11 +162,12 @@
                 while ($the_query->have_posts()) : $the_query->the_post();?>
                     <div class="post-module">
 
-                        <?php if ((has_post_thumbnail() && function_exists('has_post_thumbnail'))) { ?>
-                            <div class="figure"><a
-                                    href="<?php the_permalink() ?>"><?php the_post_thumbnail('pkb-post-image-home'); ?> </a>
-                            </div>
-                        <?php } ?>
+						<?php # LYBE: Björn [Render Category Symbol] ?>
+						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
+						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
+						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
+						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo wp_upload_dir()['baseurl'].$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
                                                                title="<?php printf(esc_attr__('Permalink to %s', 'peekaboo'), the_title_attribute('echo=0')); ?>"

@@ -334,6 +334,9 @@ Custom Widgets
 /* Social Widget */
 ul.social_icons {
     padding-left: 0;
+
+	/** LYBE: Björn [Align vertical] **/
+	margin-left: -4px;
 }
 
 .social_icons li, #footer .social_icons li {

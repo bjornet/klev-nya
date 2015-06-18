@@ -5,24 +5,40 @@ Header
     padding: 0 0 rem-calc(20);
 
 	/** LYBE: Björn [Looks Header Top] **/
-	.header-top {
-		background: white;
-		padding: 0.3em;
-		color: green
+	.header-top-wrapper {
+	    background: white;
+		.header-top {
+			max-width: $row-width;
+		    color: green;
+		    float: none;
+		    margin: 0 auto;
+			i {
+				&:not(:first-child) { margin-left: 10px; }
+				margin-right: 5px;
+			}
+			a {
+				color: green;
+				&:hover { color: lighten(green, 12); }
+			}
+		}
 	}
 }
 
-#logo {
-    margin: rem-calc(20) 0;
-    > a {
-        display: block;
-        text-align: center;
-    }
-    h1 {
-        font-size: rem-calc(35);
-        margin-bottom: 0;
-        margin-top: rem-calc(15);
-    }
+.logo-wrapper {
+	padding: 0 30px 0 0;
+	margin-left: -10px;
+	#logo {
+	    margin: rem-calc(20) 0;
+	    > a {
+	        display: block;
+	        text-align: center;
+	    }
+	    h1 {
+	        font-size: rem-calc(35);
+	        margin-bottom: 0;
+	        margin-top: rem-calc(15);
+	    }
+	}
 }
 
 /*-------------------------------
@@ -30,7 +46,12 @@ Navigation
 -------------------------------*/
 .main-nav {
     // padding: 0;
-    padding-top: rem-calc(22)
+    padding-top: rem-calc(22);
+	
+	@media only screen and (min-width: 40.063em) {
+		.top-bar-section li:not(.has-form).active a:not(.button) { padding: 0 10px; }
+		.top-bar-section li:not(.has-form) a:not(.button) { padding: 0 10px; }
+	}
 }
 
 .top-bar-section {
