@@ -213,11 +213,9 @@ figure.alignleft.figure {
 //  background-color: #eee;
 // }
 
-// body > header.contain-to-grid {
-//  margin-bottom: rem-calc(32);
-//  max-width: 100%;
-//  padding-bottom: 0;
-// }
+body .contain-to-grid {
+	background: transparent;
+}
 
 // #content {
 //  background-color: #fff;

@@ -139,21 +139,37 @@ Quick Menu
 		&.quickmenu-item-1 .menu-box {
 			background-size: 29%;
 			background-position: 4px 25px;
+			@media screen and (max-width: 1025px) {
+				background-size: 15%;
+				background-position: 4px 10px;
+			}
 			padding-left: 74px;
 		}
 		&.quickmenu-item-2 .menu-box {
 			background-size: 25%;
 			background-position: 5px 22px;
+			@media screen and (max-width: 1025px) {
+				background-size: 15%;
+				background-position: 4px 10px;
+			}
 			padding-left: 86px;
 		}
 		&.quickmenu-item-3 .menu-box {
 			background-size: 35%;
 			background-position: 5px 29px;
+			@media screen and (max-width: 1025px) {
+				background-size: 15%;
+				background-position: 4px 10px;
+			}
 			padding-left: 70px;
 		}
 		&.quickmenu-item-4 .menu-box {
 			background-size: 47%;
 			background-position: 4px 25px;
+			@media screen and (max-width: 1025px) {
+				background-size: 15%;
+				background-position: 4px 10px;
+			}
 			padding-left: 77px;
 		}
 
