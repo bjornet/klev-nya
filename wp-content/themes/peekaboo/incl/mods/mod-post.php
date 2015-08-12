@@ -2,7 +2,7 @@
 # LYBE: Björn [All pairs of category/image]
 $listKlevCats = array(
 	"hons"				=> '/2015/06/hona-ikon-2.jpg',
-	"klevs-lantbruk"	=> '/2015/05/vag.jpg',
+	"klevs-lantbruk"	=> '/2015/06/vag.jpg',
 	"gris"				=> '/2015/06/gris-ikon-2.jpg',
 	"entreprenad"		=> '/2015/06/lastmaskin-ikon.jpg',
 	"vaxtodling"		=> '/2015/06/ax-ikon-2.jpg'
