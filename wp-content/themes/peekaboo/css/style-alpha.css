@@ -1667,17 +1667,24 @@ Featured Post
 .post-module {
   background: #FFF;
   margin-bottom: 0.625rem;
+  /** LYBE: Björn [Apply to all widths] **/
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 287, ../scss/pages/_home.scss */
+/* line 293, ../scss/pages/_home.scss */
 .excerpt_container {
-  padding: 1rem 0;
+  padding: 16px;
+  padding: 1rem;
 }
-/* line 289, ../scss/pages/_home.scss */
+/* line 297, ../scss/pages/_home.scss */
 .excerpt_container > p {
   font-size: 0.875rem;
 }
-/* line 292, ../scss/pages/_home.scss */
+/* line 300, ../scss/pages/_home.scss */
 .excerpt_container .button {
   margin-bottom: 0;
   position: absolute;
@@ -1689,24 +1696,24 @@ Featured Post
   padding-right: 3px !important;
 }
 
-/* line 305, ../scss/pages/_home.scss */
+/* line 313, ../scss/pages/_home.scss */
 .section-title.row {
   margin-bottom: 1em;
 }
-/* line 308, ../scss/pages/_home.scss */
+/* line 316, ../scss/pages/_home.scss */
 .section-title h4 {
   text-transform: uppercase;
 }
-/* line 310, ../scss/pages/_home.scss */
+/* line 318, ../scss/pages/_home.scss */
 .section-title h4 a:hover {
   color: #000;
   text-decoration: none;
 }
-/* line 315, ../scss/pages/_home.scss */
+/* line 323, ../scss/pages/_home.scss */
 .section-title .button {
   color: #969b9b;
 }
-/* line 318, ../scss/pages/_home.scss */
+/* line 326, ../scss/pages/_home.scss */
 .section-title .large-2 {
   text-align: right;
 }
@@ -1714,39 +1721,39 @@ Featured Post
 /*-------------------------------
 Call to Action
 -------------------------------*/
-/* line 326, ../scss/pages/_home.scss */
+/* line 334, ../scss/pages/_home.scss */
 .intro-btn {
   overflow: hidden;
   text-align: center;
 }
-/* line 329, ../scss/pages/_home.scss */
+/* line 337, ../scss/pages/_home.scss */
 .intro-btn article {
   padding: 1.25rem 1.5625rem 0;
 }
-/* line 334, ../scss/pages/_home.scss */
+/* line 342, ../scss/pages/_home.scss */
 .intro-btn h2 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
 }
-/* line 338, ../scss/pages/_home.scss */
+/* line 346, ../scss/pages/_home.scss */
 .intro-btn h2 a {
   color: #0082c0;
 }
-/* line 340, ../scss/pages/_home.scss */
+/* line 348, ../scss/pages/_home.scss */
 .intro-btn h2 a:hover {
   color: #406f29;
   text-decoration: none;
 }
-/* line 346, ../scss/pages/_home.scss */
+/* line 354, ../scss/pages/_home.scss */
 .intro-btn p {
   font-size: 0.875rem;
 }
-/* line 349, ../scss/pages/_home.scss */
+/* line 357, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img {
   margin: 0 0 0.9375rem 0;
 }
-/* line 351, ../scss/pages/_home.scss */
+/* line 359, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img a img {
   display: inherit;
 }
@@ -1754,26 +1761,26 @@ Call to Action
 /*-------------------------------
 Headline
 -------------------------------*/
-/* line 360, ../scss/pages/_home.scss */
+/* line 368, ../scss/pages/_home.scss */
 .headline-mod {
   margin: 1.25rem 0;
 }
-/* line 362, ../scss/pages/_home.scss */
+/* line 370, ../scss/pages/_home.scss */
 .headline-mod .headline-content {
   text-align: right;
 }
-/* line 364, ../scss/pages/_home.scss */
+/* line 372, ../scss/pages/_home.scss */
 .headline-mod .headline-content h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
-/* line 369, ../scss/pages/_home.scss */
+/* line 377, ../scss/pages/_home.scss */
 .headline-mod .headline-content h4.subheader {
   font-size: 1.25rem;
   margin-top: 0;
 }
-/* line 375, ../scss/pages/_home.scss */
+/* line 383, ../scss/pages/_home.scss */
 .headline-mod .flex-video {
   margin-top: 1rem;
 }
@@ -1781,18 +1788,18 @@ Headline
 /*-------------------------------
 Definition List Mod
 -------------------------------*/
-/* line 383, ../scss/pages/_home.scss */
+/* line 391, ../scss/pages/_home.scss */
 .mod-def-list {
   margin: 1.875rem 0 0 0;
   overflow: hidden;
 }
-/* line 386, ../scss/pages/_home.scss */
+/* line 394, ../scss/pages/_home.scss */
 .mod-def-list .mod-def-list-content {
   text-align: center;
   margin-bottom: 1.5625rem;
 }
 
-/* line 393, ../scss/pages/_home.scss */
+/* line 401, ../scss/pages/_home.scss */
 dl.def-list i {
   font-size: 1.875rem;
   color: #5f5f5f;
@@ -1800,18 +1807,18 @@ dl.def-list i {
   position: relative;
   top: -0.125rem;
 }
-/* line 400, ../scss/pages/_home.scss */
+/* line 408, ../scss/pages/_home.scss */
 dl.def-list img {
   margin-bottom: 0.625rem;
 }
-/* line 404, ../scss/pages/_home.scss */
+/* line 412, ../scss/pages/_home.scss */
 dl.def-list dt h4 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 413, ../scss/pages/_home.scss */
+/* line 421, ../scss/pages/_home.scss */
 dl.def-list dd {
   font-size: 0.875rem;
 }
@@ -1819,7 +1826,7 @@ dl.def-list dd {
 /*-------------------------------
 Testimonial  Mod
 -------------------------------*/
-/* line 421, ../scss/pages/_home.scss */
+/* line 429, ../scss/pages/_home.scss */
 .testimonial-post {
   display: block;
   padding: 1.6em 1.6em 1.6em 2em;
@@ -1832,12 +1839,12 @@ Testimonial  Mod
   transition: background-color 0.25s;
   background: rgba(0, 0, 0, 0.02) url(../img/blockquote_bg.png) no-repeat 15px 15px;
 }
-/* line 428, ../scss/pages/_home.scss */
+/* line 436, ../scss/pages/_home.scss */
 .testimonial-post:hover {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-/* line 434, ../scss/pages/_home.scss */
+/* line 442, ../scss/pages/_home.scss */
 .testimonial_excerpt_container > p {
   color: rgba(0, 0, 0, 0.7);
   text-align: right;
@@ -1848,7 +1855,7 @@ Testimonial  Mod
   font-family: "Lucida Bright", Georgia, serif;
 }
 
-/* line 444, ../scss/pages/_home.scss */
+/* line 452, ../scss/pages/_home.scss */
 .testimonial_author {
   text-align: right;
   margin-top: 1.6em;
@@ -1856,17 +1863,17 @@ Testimonial  Mod
   color: black;
   font-weight: bold;
 }
-/* line 452, ../scss/pages/_home.scss */
+/* line 460, ../scss/pages/_home.scss */
 .testimonial_author span {
   font-weight: normal;
 }
 
 /** LYBE: Björn [Alter ALL Mod <hr> looks here] **/
-/* line 460, ../scss/pages/_home.scss */
+/* line 468, ../scss/pages/_home.scss */
 .mod-headline hr {
   border-color: transparent;
 }
-/* line 461, ../scss/pages/_home.scss */
+/* line 469, ../scss/pages/_home.scss */
 .mod-post hr {
   border-color: transparent;
 }
@@ -2671,7 +2678,12 @@ Flexslider
 /*-------------------------------
 Home Page
 -------------------------------*/
-/* line 65, ../scss/modules/_flexslider.scss */
+/* line 62, ../scss/modules/_flexslider.scss */
+#slide-container {
+  display: none;
+}
+
+/* line 66, ../scss/modules/_flexslider.scss */
 #slider-wrapper .caption-excerpt {
   position: absolute;
   left: 8%;
@@ -2680,22 +2692,22 @@ Home Page
   z-index: 1;
   -webkit-transform: translateZ(0);
 }
-/* line 74, ../scss/modules/_flexslider.scss */
+/* line 75, ../scss/modules/_flexslider.scss */
 #slider-wrapper .flexslider .slides > li {
   position: relative;
 }
-/* line 79, ../scss/modules/_flexslider.scss */
+/* line 80, ../scss/modules/_flexslider.scss */
 #slider-wrapper .flex-direction-nav a {
   width: 46px;
   height: 45px;
   margin: -1.4375rem 0 0;
   background: url(../img/orbit-nav.png) no-repeat;
 }
-/* line 86, ../scss/modules/_flexslider.scss */
+/* line 87, ../scss/modules/_flexslider.scss */
 #slider-wrapper .flex-direction-nav .flex-prev {
   background-position: -1px 0;
 }
-/* line 89, ../scss/modules/_flexslider.scss */
+/* line 90, ../scss/modules/_flexslider.scss */
 #slider-wrapper .flex-direction-nav .flex-next {
   background-position: -60px 0;
 }
@@ -3743,19 +3755,8 @@ Google maps via JS V3
     margin-top: -85px;
   }
 
-  /* line 85, ../scss/state/_media-queries.scss */
-  .post-module {
-    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-
   /* line 91, ../scss/state/_media-queries.scss */
   .excerpt_container {
-    padding: 16px;
-    padding: 1rem;
     min-height: 174px;
   }
 
@@ -3788,37 +3789,37 @@ Google maps via JS V3
   .contain-to-grid.fixed {
     background: #0686cf;
   }
+
+  /* line 114, ../scss/state/_media-queries.scss */
+  #slide-container {
+    display: block;
+  }
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  /* line 118, ../scss/state/_media-queries.scss */
+  /* line 121, ../scss/state/_media-queries.scss */
   .section-title.row {
     margin-bottom: 0;
-  }
-
-  /* line 121, ../scss/state/_media-queries.scss */
-  .excerpt_container {
-    padding: 0.313em 0;
   }
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-  /* line 135, ../scss/state/_media-queries.scss */
+  /* line 138, ../scss/state/_media-queries.scss */
   dl.def-list dd {
     font-size: 13px;
     font-size: 0.813rem;
   }
 
-  /* line 153, ../scss/state/_media-queries.scss */
+  /* line 156, ../scss/state/_media-queries.scss */
   .intro-btn .intro-btn-img a img {
     width: 80%;
   }
 
-  /* line 157, ../scss/state/_media-queries.scss */
+  /* line 160, ../scss/state/_media-queries.scss */
   #quickmenu {
     margin-bottom: 0.9375rem;
   }
-  /* line 159, ../scss/state/_media-queries.scss */
+  /* line 162, ../scss/state/_media-queries.scss */
   #quickmenu .small-block-grid-2 > li {
     width: 100%;
   }

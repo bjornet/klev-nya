@@ -282,10 +282,18 @@ Featured Post
 .post-module {
   background: #FFF;
   margin-bottom: rem-calc(10);
+
+   /** LYBE: Björn [Apply to all widths] **/
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  @include single-box-shadow(0, 2px, 4px, 0, rgba(0, 0, 0, 0.2), false);
 }
 
+
 .excerpt_container {
-  padding: rem-calc(16) 0;
+  padding: 16px;
+  padding: 1rem;
+//  padding: rem-calc(16) 0;
   > p {
     font-size: 0.875rem;
   }
