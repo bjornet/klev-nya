@@ -138,23 +138,25 @@ class Yoast_GA_JS extends Yoast_GA_Tracking {
 	}
 
 	/**
-	 * Output tracking link
+	 * Ouput tracking link
 	 *
-	 * @param string               $category
-	 * @param Yoast_GA_Link_Target $link_target
+	 * @param string $label
+	 * @param array  $matches
 	 *
-	 * @return string
+	 * @return mixed
 	 */
-	protected function output_parse_link( $category, Yoast_GA_Link_Target $link_target ) {
+	protected function output_parse_link( $label, $matches ) {
+		$link = $this->get_target( $label, $matches );
+
 		// bail early for links that we can't handle
-		if ( $link_target->type === 'internal' ) {
-			return $link_target->hyperlink;
+		if ( is_null( $link['type'] ) || 'internal' === $link['type'] ) {
+			return $matches[0];
 		}
 
 		$onclick  = null;
-		$full_url = $this->make_full_url( $link_target );
+		$full_url = $this->make_full_url( $link );
 
-		switch ( $link_target->type ) {
+		switch ( $link['type'] ) {
 			case 'download':
 				if ( $this->options['track_download_as'] == 'pageview' ) {
 					$onclick = "_gaq.push(['_trackPageview','download/" . esc_js( $full_url ) . "']);";
@@ -165,24 +167,25 @@ class Yoast_GA_JS extends Yoast_GA_Tracking {
 
 				break;
 			case 'email':
-				$onclick = "_gaq.push(['_trackEvent','mailto','" . esc_js( $link_target->original_url ) . "']);";
+				$onclick = "_gaq.push(['_trackEvent','mailto','" . esc_js( $link['original_url'] ) . "']);";
 
 				break;
 			case 'internal-as-outbound':
-				$category = $this->sanitize_internal_label();
+				$label = $this->sanitize_internal_label();
 
-				$onclick = "_gaq.push(['_trackEvent', '" . esc_js( $link_target->category ) . '-' . esc_js( $category ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link_target->link_text ) ) . "']);";
+				$onclick = "_gaq.push(['_trackEvent', '" . esc_js( $link['category'] ) . '-' . esc_js( $label ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link['link_text'] ) ) . "']);";
 
 				break;
 			case 'outbound':
-				$onclick = "_gaq.push(['_trackEvent', '" . esc_js( $link_target->category ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link_target->link_text ) ) . "']);";
+				$onclick = "_gaq.push(['_trackEvent', '" . esc_js( $link['category'] ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link['link_text'] ) ) . "']);";
 
 				break;
 		}
 
-		$link_target->link_attributes = $this->output_add_onclick( $link_target->link_attributes, $onclick );
+		$link['link_attributes'] = $this->output_add_onclick( $link['link_attributes'], $onclick );
 
-		return '<a href="' . $full_url . '" ' . $link_target->link_attributes . '>' . $link_target->link_text . '</a>';
+		return '<a href="' . $full_url . '" ' . $link['link_attributes'] . '>' . $link['link_text'] . '</a>';
 	}
 
 }
+

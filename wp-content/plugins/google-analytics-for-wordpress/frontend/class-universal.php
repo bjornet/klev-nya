@@ -47,21 +47,24 @@ class Yoast_GA_Universal extends Yoast_GA_Tracking {
 				return null;
 			}
 
+			// Set tracking code here
 			if ( ! empty( $ua_code ) ) {
-				// Prepare the arguments to be passed into the create method.
-				$create_arguments = array(
-					'trackingId' => $ua_code,
-					'cookieDomain' => $domain,
-				);
-				if ( $this->options['add_allow_linker'] ) {
-					$create_arguments['allowLinker'] = true;
+				if ( $this->options['add_allow_linker'] && ! $this->options['allow_anchor'] ) {
+					$gaq_push[] = "'create', '" . $ua_code . "', '" . $domain . "', {'allowLinker': true}";
 				}
-				if ( $this->options['allow_anchor'] ) {
-					$create_arguments['allowAnchor'] = true;
+				else {
+					if ( $this->options['allow_anchor'] && ! $this->options['add_allow_linker'] ) {
+						$gaq_push[] = "'create', '" . $ua_code . "', '" . $domain . "', {'allowAnchor': true}";
+					}
+					else {
+						if ( $this->options['allow_anchor'] && $this->options['add_allow_linker'] ) {
+							$gaq_push[] = "'create', '" . $ua_code . "', '" . $domain . "', {'allowAnchor': true, 'allowLinker': true}";
+						}
+						else {
+							$gaq_push[] = "'create', '" . $ua_code . "', '" . $domain . "'";
+						}
+					}
 				}
-				// Allow other plugins / themes to filter the create args.
-				$create_arguments = apply_filters( 'yst_ga_filter_ga_create_args', $create_arguments );
-				$gaq_push[] = "'create', " .  json_encode( ( object ) $create_arguments );
 			}
 
 			$gaq_push[] = "'set', 'forceSSL', true";
@@ -135,12 +138,12 @@ class Yoast_GA_Universal extends Yoast_GA_Tracking {
 				return $gaq_push;
 			}
 
+			$gaq_push = apply_filters( 'yoast-ga-push-array-universal', $gaq_push );
+
+			$ga_settings = $this->options; // Assign the settings to the javascript include view
 
 			// Include the tracking view
 			if ( ! $this->debug_mode() ) {
-				$gaq_push    = apply_filters( 'yoast-ga-push-array-universal', $gaq_push );
-				$object_name = $this->get_js_object_name();
-				$ga_settings = $this->options; // Assign the settings to the javascript include view
 				require( 'views/tracking-universal.php' );
 			}
 		}
@@ -150,82 +153,59 @@ class Yoast_GA_Universal extends Yoast_GA_Tracking {
 	}
 
 	/**
-	 * Output tracking link
+	 * Ouput tracking link
 	 *
-	 * @param string               $category
-	 * @param Yoast_GA_Link_Target $link_target
+	 * @param string $label
+	 * @param array  $matches
 	 *
-	 * @return string
+	 * @return mixed
 	 */
-	protected function output_parse_link( $category, Yoast_GA_Link_Target $link_target ) {
-		$object_name = $this->get_js_object_name();
+	protected function output_parse_link( $label, $matches ) {
+		$link = $this->get_target( $label, $matches );
 
 		// bail early for links that we can't handle
-		if ( $link_target->type === 'internal' ) {
-			return $link_target->hyperlink;
+		if ( is_null( $link['type'] ) || 'internal' === $link['type'] ) {
+			return $matches[0];
 		}
 
 		$onclick  = null;
-		$full_url = $this->make_full_url( $link_target );
+		$full_url = $this->make_full_url( $link );
 
-
-		switch ( $link_target->type ) {
+		switch ( $link['type'] ) {
 			case 'download':
 				if ( $this->options['track_download_as'] == 'pageview' ) {
-					$onclick = $object_name . "('send', 'pageview', '" . esc_js( $full_url ) . "');";
+					$onclick = "__gaTracker('send', 'pageview', '" . esc_js( $full_url ) . "');";
 				}
 				else {
-					$onclick = $object_name . "('send', 'event', 'download', '" . esc_js( $full_url ) . "');";
+					$onclick = "__gaTracker('send', 'event', 'download', '" . esc_js( $full_url ) . "');";
 				}
 
 				break;
 			case 'email':
-				$onclick = $object_name . "('send', 'event', 'mailto', '" . esc_js( $link_target->original_url ) . "');";
+				$onclick = "__gaTracker('send', 'event', 'mailto', '" . esc_js( $link['original_url'] ) . "');";
 
 				break;
 			case 'internal-as-outbound':
-				$category = $this->sanitize_internal_label();
+				$label = $this->sanitize_internal_label();
 
-				$onclick = $object_name . "('send', '" . esc_js( $this->options['track_download_as'] ) . "', '" . esc_js( $link_target->category ) . '-' . esc_js( $category ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link_target->link_text ) ) . "');";
+				$onclick = "__gaTracker('send', '" . esc_js( $this->options['track_download_as'] ) . "', '" . esc_js( $link['category'] ) . '-' . esc_js( $label ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link['link_text'] ) ) . "');";
 
 				break;
 			case 'outbound':
 				if ( $this->options['track_outbound'] == 1 ) {
-					$onclick = $object_name . "('send', 'event', '" . esc_js( $link_target->category ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link_target->link_text ) ) . "');";
+					$onclick = "__gaTracker('send', 'event', '" . esc_js( $link['category'] ) . "', '" . esc_js( $full_url ) . "', '" . esc_js( strip_tags( $link['link_text'] ) ) . "');";
 				}
 
 				break;
 		}
 
-		$link_target->link_attributes = $this->output_add_onclick( $link_target->link_attributes, $onclick );
-		if ( ! empty( $link_target->link_attributes ) ) {
-			return '<a href="' . $full_url . '" ' . trim( $link_target->link_attributes ) . '>' . $link_target->link_text . '</a>';
+		$link['link_attributes'] = $this->output_add_onclick( $link['link_attributes'], $onclick );
+
+		if ( ! empty( $link['link_attributes'] ) ) {
+			return '<a href="' . $full_url . '" ' . trim( $link['link_attributes'] ) . '>' . $link['link_text'] . '</a>';
 		}
 
-		return '<a href="' . $full_url . '">' . $link_target->link_text . '</a>';
-	}
-
-	/**
-	 * Get the universal object name
-	 *
-	 * @return string
-	 */
-	public static function get_js_object_name() {
-		/**
-		 * @static string
-		 */
-		static $object_name;
-
-		if ( empty( $object_name ) ) {
-			/**
-			 * Filter: 'yoast-ga-universal-object-name' - Allows filtering of the commands to push
-			 *
-			 * @api array $gaq_push
-			 */
-			$object_name = apply_filters( 'yoast-ga-universal-object-name', '__gaTracker' );
-		}
-
-		return $object_name;
+		return '<a href="' . $full_url . '">' . $link['link_text'] . '</a>';
 	}
 
 }
