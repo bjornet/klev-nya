@@ -1204,24 +1204,28 @@ Social Icons
   float: left;
 }
 /* line 79, ../scss/layout/_header.scss */
+.top-bar-section .social_icons_header li:not(.has-form).divider {
+  display: none;
+}
+/* line 80, ../scss/layout/_header.scss */
 .top-bar-section .social_icons_header li:not(.has-form) a:not(.button) {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.25rem;
 }
-/* line 82, ../scss/layout/_header.scss */
+/* line 83, ../scss/layout/_header.scss */
 .top-bar-section .social_icons_header li:not(.has-form) a:not(.button):hover {
   color: white;
 }
 
 @media only screen and (min-width: 58.75em) {
-  /* line 91, ../scss/layout/_header.scss */
+  /* line 92, ../scss/layout/_header.scss */
   .top-bar-section .dropdown li a {
     line-height: 1.6;
     padding: 0.625rem 16.66667px;
   }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 99, ../scss/layout/_header.scss */
+  /* line 100, ../scss/layout/_header.scss */
   .top-bar {
     padding: 0 0.625rem;
     -moz-border-radius: 6px;
@@ -1229,7 +1233,7 @@ Social Icons
     border-radius: 6px;
   }
 
-  /* line 104, ../scss/layout/_header.scss */
+  /* line 105, ../scss/layout/_header.scss */
   .top-bar-section .social_icons_header li > a:not(.button) {
     padding-left: 0.5rem;
     padding-right: 0;
@@ -1639,31 +1643,36 @@ Featured Post
 /* line 256, ../scss/pages/_home.scss */
 .featured-post .post-module a {
   padding: 10px 0 0;
-  display: block;
 }
-/* line 259, ../scss/pages/_home.scss */
+/* line 258, ../scss/pages/_home.scss */
+.featured-post .post-module a.figure-img-link {
+  display: flex;
+  min-height: 110px;
+}
+/* line 262, ../scss/pages/_home.scss */
 .featured-post .post-module a .figure-img {
+  align-self: center;
   max-height: 100px;
   margin: 0 auto;
   display: block;
 }
-/* line 266, ../scss/pages/_home.scss */
+/* line 270, ../scss/pages/_home.scss */
 .featured-post .post-module .excerpt_container {
   padding-top: 5px;
   min-height: 245px;
 }
 
-/* line 274, ../scss/pages/_home.scss */
+/* line 278, ../scss/pages/_home.scss */
 .entry-title a {
   color: #406f29;
 }
-/* line 276, ../scss/pages/_home.scss */
+/* line 280, ../scss/pages/_home.scss */
 .entry-title a:hover {
   color: #000;
   text-decoration: none;
 }
 
-/* line 282, ../scss/pages/_home.scss */
+/* line 286, ../scss/pages/_home.scss */
 .post-module {
   background: #FFF;
   margin-bottom: 0.625rem;
@@ -1675,16 +1684,16 @@ Featured Post
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* line 293, ../scss/pages/_home.scss */
+/* line 297, ../scss/pages/_home.scss */
 .excerpt_container {
   padding: 16px;
   padding: 1rem;
 }
-/* line 297, ../scss/pages/_home.scss */
+/* line 301, ../scss/pages/_home.scss */
 .excerpt_container > p {
   font-size: 0.875rem;
 }
-/* line 300, ../scss/pages/_home.scss */
+/* line 304, ../scss/pages/_home.scss */
 .excerpt_container .button {
   margin-bottom: 0;
   position: absolute;
@@ -1696,24 +1705,24 @@ Featured Post
   padding-right: 3px !important;
 }
 
-/* line 313, ../scss/pages/_home.scss */
+/* line 317, ../scss/pages/_home.scss */
 .section-title.row {
   margin-bottom: 1em;
 }
-/* line 316, ../scss/pages/_home.scss */
+/* line 320, ../scss/pages/_home.scss */
 .section-title h4 {
   text-transform: uppercase;
 }
-/* line 318, ../scss/pages/_home.scss */
+/* line 322, ../scss/pages/_home.scss */
 .section-title h4 a:hover {
   color: #000;
   text-decoration: none;
 }
-/* line 323, ../scss/pages/_home.scss */
+/* line 327, ../scss/pages/_home.scss */
 .section-title .button {
   color: #969b9b;
 }
-/* line 326, ../scss/pages/_home.scss */
+/* line 330, ../scss/pages/_home.scss */
 .section-title .large-2 {
   text-align: right;
 }
@@ -1721,39 +1730,39 @@ Featured Post
 /*-------------------------------
 Call to Action
 -------------------------------*/
-/* line 334, ../scss/pages/_home.scss */
+/* line 338, ../scss/pages/_home.scss */
 .intro-btn {
   overflow: hidden;
   text-align: center;
 }
-/* line 337, ../scss/pages/_home.scss */
+/* line 341, ../scss/pages/_home.scss */
 .intro-btn article {
   padding: 1.25rem 1.5625rem 0;
 }
-/* line 342, ../scss/pages/_home.scss */
+/* line 346, ../scss/pages/_home.scss */
 .intro-btn h2 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
 }
-/* line 346, ../scss/pages/_home.scss */
+/* line 350, ../scss/pages/_home.scss */
 .intro-btn h2 a {
   color: #622d67;
 }
-/* line 348, ../scss/pages/_home.scss */
+/* line 352, ../scss/pages/_home.scss */
 .intro-btn h2 a:hover {
   color: #406f29;
   text-decoration: none;
 }
-/* line 354, ../scss/pages/_home.scss */
+/* line 358, ../scss/pages/_home.scss */
 .intro-btn p {
   font-size: 0.875rem;
 }
-/* line 357, ../scss/pages/_home.scss */
+/* line 361, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img {
   margin: 0 0 0.9375rem 0;
 }
-/* line 359, ../scss/pages/_home.scss */
+/* line 363, ../scss/pages/_home.scss */
 .intro-btn .intro-btn-img a img {
   display: inherit;
 }
@@ -1761,26 +1770,26 @@ Call to Action
 /*-------------------------------
 Headline
 -------------------------------*/
-/* line 368, ../scss/pages/_home.scss */
+/* line 372, ../scss/pages/_home.scss */
 .headline-mod {
   margin: 1.25rem 0;
 }
-/* line 370, ../scss/pages/_home.scss */
+/* line 374, ../scss/pages/_home.scss */
 .headline-mod .headline-content {
   text-align: right;
 }
-/* line 372, ../scss/pages/_home.scss */
+/* line 376, ../scss/pages/_home.scss */
 .headline-mod .headline-content h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
-/* line 377, ../scss/pages/_home.scss */
+/* line 381, ../scss/pages/_home.scss */
 .headline-mod .headline-content h4.subheader {
   font-size: 1.25rem;
   margin-top: 0;
 }
-/* line 383, ../scss/pages/_home.scss */
+/* line 387, ../scss/pages/_home.scss */
 .headline-mod .flex-video {
   margin-top: 1rem;
 }
@@ -1788,18 +1797,18 @@ Headline
 /*-------------------------------
 Definition List Mod
 -------------------------------*/
-/* line 391, ../scss/pages/_home.scss */
+/* line 395, ../scss/pages/_home.scss */
 .mod-def-list {
   margin: 1.875rem 0 0 0;
   overflow: hidden;
 }
-/* line 394, ../scss/pages/_home.scss */
+/* line 398, ../scss/pages/_home.scss */
 .mod-def-list .mod-def-list-content {
   text-align: center;
   margin-bottom: 1.5625rem;
 }
 
-/* line 401, ../scss/pages/_home.scss */
+/* line 405, ../scss/pages/_home.scss */
 dl.def-list i {
   font-size: 1.875rem;
   color: #5f5f5f;
@@ -1807,18 +1816,18 @@ dl.def-list i {
   position: relative;
   top: -0.125rem;
 }
-/* line 408, ../scss/pages/_home.scss */
+/* line 412, ../scss/pages/_home.scss */
 dl.def-list img {
   margin-bottom: 0.625rem;
 }
-/* line 412, ../scss/pages/_home.scss */
+/* line 416, ../scss/pages/_home.scss */
 dl.def-list dt h4 {
   font-size: 1.125rem;
   margin-top: 0;
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 421, ../scss/pages/_home.scss */
+/* line 425, ../scss/pages/_home.scss */
 dl.def-list dd {
   font-size: 0.875rem;
 }
@@ -1826,7 +1835,7 @@ dl.def-list dd {
 /*-------------------------------
 Testimonial  Mod
 -------------------------------*/
-/* line 429, ../scss/pages/_home.scss */
+/* line 433, ../scss/pages/_home.scss */
 .testimonial-post {
   display: block;
   padding: 1.6em 1.6em 1.6em 2em;
@@ -1839,12 +1848,12 @@ Testimonial  Mod
   transition: background-color 0.25s;
   background: rgba(0, 0, 0, 0.02) url(../img/blockquote_bg.png) no-repeat 15px 15px;
 }
-/* line 436, ../scss/pages/_home.scss */
+/* line 440, ../scss/pages/_home.scss */
 .testimonial-post:hover {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-/* line 442, ../scss/pages/_home.scss */
+/* line 446, ../scss/pages/_home.scss */
 .testimonial_excerpt_container > p {
   color: rgba(0, 0, 0, 0.7);
   text-align: right;
@@ -1855,7 +1864,7 @@ Testimonial  Mod
   font-family: "Lucida Bright", Georgia, serif;
 }
 
-/* line 452, ../scss/pages/_home.scss */
+/* line 456, ../scss/pages/_home.scss */
 .testimonial_author {
   text-align: right;
   margin-top: 1.6em;
@@ -1863,17 +1872,17 @@ Testimonial  Mod
   color: black;
   font-weight: bold;
 }
-/* line 460, ../scss/pages/_home.scss */
+/* line 464, ../scss/pages/_home.scss */
 .testimonial_author span {
   font-weight: normal;
 }
 
 /** LYBE: Björn [Alter ALL Mod <hr> looks here] **/
-/* line 468, ../scss/pages/_home.scss */
+/* line 472, ../scss/pages/_home.scss */
 .mod-headline hr {
   border-color: transparent;
 }
-/* line 469, ../scss/pages/_home.scss */
+/* line 473, ../scss/pages/_home.scss */
 .mod-post hr {
   border-color: transparent;
 }
@@ -2419,6 +2428,12 @@ ul.comment_list {
 
 /*---Comment Form---*/
 /* line 210, ../scss/pages/_pages.scss */
+#comments {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 215, ../scss/pages/_pages.scss */
 #respond h3, #comments h3 {
   font-size: 1.375rem;
 }
@@ -2426,11 +2441,11 @@ ul.comment_list {
 /*-------------------------------
 Page
 -------------------------------*/
-/* line 217, ../scss/pages/_pages.scss */
+/* line 222, ../scss/pages/_pages.scss */
 .landing_image {
   margin: 0 0 1.125rem;
 }
-/* line 219, ../scss/pages/_pages.scss */
+/* line 224, ../scss/pages/_pages.scss */
 .landing_image img {
   border: 1px solid #DFDFDF;
 }

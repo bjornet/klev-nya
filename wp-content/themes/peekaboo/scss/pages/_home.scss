@@ -255,12 +255,16 @@ Featured Post
 	.post-module {
 		a {
 		    padding: 10px 0 0;
-		    display: block;
+            &.figure-img-link {
+    		    display: flex;
+                min-height: 110px;
+            }
 		    .figure-img {
+                align-self: center;
 				max-height: 100px;
 		   		margin: 0 auto;
 		   		display: block;
-		   	}
+            }
 		}
 
 		.excerpt_container {

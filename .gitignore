@@ -1,2 +1,4 @@
 .DS_Store
 wp-content/themes/peekaboo/config.codekit
+wp-content/uploads/
+wp-config.php

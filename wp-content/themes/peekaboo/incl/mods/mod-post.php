@@ -74,7 +74,9 @@ $uploadDir = $uploadDir['baseurl'];
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a class="figure-img-link" href="<?php the_permalink() ?>">
+                            <img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" />
+                        </a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -104,7 +106,7 @@ $uploadDir = $uploadDir['baseurl'];
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a class="figure-img-link" href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -136,7 +138,7 @@ $uploadDir = $uploadDir['baseurl'];
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a class="figure-img-link" href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"
@@ -168,7 +170,7 @@ $uploadDir = $uploadDir['baseurl'];
 						<?php $postCategories = get_the_category(); // Fetches first category slug ?>
 						<?php $catImgSrc = getFeaturedImage($postCategories, $listKlevCats); ?>
 						<?php $catImgSrc = $catImgSrc === NULL ? $listKlevCats["klevs-lantbruk"] : $catImgSrc; ?>
-						<a href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
+						<a class="figure-img-link" href="<?php the_permalink() ?>"><img class="figure-img" src="<?php echo $uploadDir.$catImgSrc; ?>" title="<?php the_title(); ?>" /></a>
 
                         <div class="excerpt_container">
                             <h3 class="entry-title replace"><a href="<?php the_permalink(); ?>"

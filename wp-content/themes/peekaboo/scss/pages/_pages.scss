@@ -207,6 +207,11 @@ ul.comment_list {
 }
 
 /*---Comment Form---*/
+#comments {
+    // remove comments visibility
+    display: none;
+    visibility: hidden;
+}
 #respond h3, #comments h3 {
     font-size: rem-calc(22);
 }

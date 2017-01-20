@@ -76,6 +76,7 @@ Social Icons
 -------------------------------*/
 .top-bar-section .social_icons_header li:not(.has-form) {
     float: left;
+    &.divider { display: none; }
     a:not(.button) {
         color: $topbar-social-icons;
         font-size: rem-calc(20);
