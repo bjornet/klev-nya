@@ -277,7 +277,7 @@
 
 			if (val && ! val.match(/^[a-z][a-z0-9.+-]*:/i)) { // check the scheme part
 				val = val.replace(/^\/+/, '');
-				val = 'http://' + val;
+				val = '//' + val;
 			}
 
 			$(this).val(val);

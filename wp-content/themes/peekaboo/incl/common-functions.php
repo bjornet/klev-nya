@@ -539,12 +539,10 @@ function pkb_custom_css()
     //google web fonts
     if ($google_font != 'none') {
         if ($google_font == 'Raleway') {
-            $google_font_link = '<link href="http://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">' . "\n";
+            $google_font_link = '<link href="//fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">' . "\n";
         } else {
-            $google_font_link = '<link href="http://fonts.googleapis.com/css?family=' . $google_font . '" rel="stylesheet" type="text/css" />' . "\n";
+            $google_font_link = '<link href="//fonts.googleapis.com/css?family=' . $google_font . '" rel="stylesheet" type="text/css" />' . "\n";
         }
-
-        // $google_font_link = '<link href="http://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">'."\n";
 
         $google_font_code = '.replace {font-family:\'' . $google_font . '\';}' . "\n";
         array_push($css_script_container, $google_font_link);

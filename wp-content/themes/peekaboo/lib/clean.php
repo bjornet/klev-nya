@@ -125,9 +125,6 @@ if( ! function_exists( 'peekaboo_scripts_and_styles ' ) ) {
 	    // modernizr (without media query polyfill)
 	    wp_register_script( 'peekaboo-modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '2.7.1', false );
 
-	    // register Google font
-	    // wp_register_style('google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lora:400,700|Droid+Sans+Mono');
-
 	    // ie-only style sheet
 	    wp_register_style( 'peekaboo-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
 
@@ -139,7 +136,7 @@ if( ! function_exists( 'peekaboo_scripts_and_styles ' ) ) {
 
 	    global $is_IE;
 	    if ($is_IE) {
-	       wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
+	       wp_register_script ( 'html5shiv', "//html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
 	    }
 
         // theme script
